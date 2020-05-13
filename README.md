@@ -7,7 +7,7 @@
     <a href="https://evenciohernandez.com.ve/">Evencio Hernández</a>
 </p><br>
 
-# App for Patient Dates Management with ReacJS (Only Frontend)
+# App for Personal Weekly Budget Control with ReacJS (Only Frontend)
 
 ## Run proyect
 
