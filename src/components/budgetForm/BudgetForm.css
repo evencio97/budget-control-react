@@ -10,15 +10,3 @@
 .left-input{
     margin-right: 20px;
 }
-.submit-button{
-    min-width: fit-content;
-    height: fit-content;
-    transition: ease-in-out .5s !important;
-    border: solid 2px #28a745 !important;
-    border-radius: 15px !important;
-}
-.submit-button:hover{
-    border-color: #218838 !important;
-    background-color: transparent !important;
-    color: #218838 !important;
-}

@@ -38,20 +38,17 @@ h2 {
   box-shadow: none !important;
 }
 
-.budget p{
-  margin-bottom: 0;
-  font-weight: bold;
+.submit-button{
+  min-width: fit-content;
+  height: fit-content;
+  transition: ease-in-out .5s !important;
+  border: solid 2px #28a745 !important;
+  border-radius: 15px !important;
 }
-.budget p span {
-  font-weight: normal;
-}
-
-.fild {
-  margin-bottom: 2rem;
-}
-
-.error {
-  text-align: center;
+.submit-button:hover{
+  border-color: #218838 !important;
+  background-color: transparent !important;
+  color: #218838 !important;
 }
 
 .alert {
@@ -63,31 +60,4 @@ h2 {
 }
 .alert p {
   margin-bottom: 0!important;
-}
-
-#expense {
-  margin-bottom: 30px;
-}
-.expenses-make  {
-  margin-bottom: 2rem;
-}
-.expenses-make li{
-  list-style: none;
-  margin-bottom: 0rem;
-  border-bottom: 1px solid #e1e1e1;
-  padding: 1rem 0;
-}
-.expenses-make li:last-of-type {
-  margin-bottom: 0!important;
-}
-.expenses-make li p {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin:0;
-}
-.expenses-make li p .gasto {
-  background-color: #004085;
-  padding: 1rem;
-  color:white;
 }

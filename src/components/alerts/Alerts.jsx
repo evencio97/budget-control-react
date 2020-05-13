@@ -9,11 +9,12 @@ function Alerts({ alerts, setAlerts }) {
     
     const closeAlert = id => {
         let aleId = "#ale-"+id;
+        let newAlerts = alerts.filter(alert => alert.id !== id);
         $(aleId).removeClass("fadeInRight");
+        $(aleId).slideUp(500);
         $(aleId).addClass("fadeOutRight");
         $(aleId).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
-            (() => setAlerts(alerts.filter(alert => alert.id !== id))));
-        // $("#ale-"+id).slideUp(500, (() => setAlerts(alerts.filter(alert => alert.id !== id))));
+            (() => setAlerts(newAlerts)));
     };
 
     if (!alerts.length) return (null);
@@ -21,7 +22,7 @@ function Alerts({ alerts, setAlerts }) {
     return (
         <div className="alertsColumn">
             {alerts.map(alert => (
-                <div key={"ale-"+alert.id} id={"ale-"+alert.id} className={"alert alert-dismissible fast animated fadeInRight " + (alert.class ? alert.class : 'alert-danger')} 
+                <div key={"ale-"+alert.id} id={"ale-"+alert.id} className={"alert alert-dismissible faster animated fadeInRight " + (alert.class ? alert.class : 'alert-danger')} 
                     role="alert" onClick={() => closeAlert(alert.id)}>
                     <strong>{alert.type ? alert.type + '! ' : ''}</strong>{alert.message}
                     <button type="button" className="close">
