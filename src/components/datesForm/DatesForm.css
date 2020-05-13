@@ -1,0 +1,32 @@
+#dateForm{
+    background-color: #bbbbbb;
+    padding: 1.5em 1em;
+    border-radius: 20px;
+}
+
+.prepend-input input, .prepend-input select{
+    width: fit-content !important;
+    min-width: fit-content !important;
+    max-width: fit-content !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+    border-width: 1px 0 1px 1px !important;
+}
+
+.submit-button{
+    transition: ease-in-out .5s !important;
+    border: solid 2px #28a745 !important;
+    border-radius: 15px !important;
+}
+.submit-button:hover{
+    border-color: #218838 !important;
+    background-color: transparent !important;
+    color: #218838 !important;
+}
+
+.input-error {
+    border-color: red !important;
+    color: red !important;
+}
+.input-error::placeholder {
+    color: red !important;
+}

@@ -1,0 +1,13 @@
+.input-error {
+    border-color: red !important;
+    color: red !important;
+}
+.input-error::placeholder {
+    color: red !important;
+}
+.input-error-msg{
+    display: inline;
+    padding: 0 0 15px 10px !important;
+    color: red;
+    display: none;
+}
