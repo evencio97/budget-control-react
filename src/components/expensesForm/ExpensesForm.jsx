@@ -21,6 +21,7 @@ function ExpensesForm({ title= "Enter Your Expense", currency="$", budget,
         if (!tempExpense.name || !tempExpense.amount) return addAlert({ type: 'Error', message: 'The expense is invalid.' });
         // if ((tempExpense.amount+totalExpense) > budget) return addAlert({ type: 'Error', message: "Don't have enough budget." });
         tempExpense.id = uuid();
+        tempExpense.amount = Math.round(tempExpense.amount*100)/100;
         setExpensesList([ ...expensesList, tempExpense ]);
         setTotalExpenses( totalExpense+tempExpense.amount );
         addAlert({ class: 'alert-success',type: 'Success', message: 'The expense have been added.' });

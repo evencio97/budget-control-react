@@ -49,7 +49,8 @@ function App() {
                                 <ExpensesForm currency={currency} budget={budget} totalExpense={totalExpense}
                                     setTotalExpenses={setTotalExpenses} expensesList={expensesList} 
                                     setExpensesList={setExpensesList} addAlert={addAlert} />
-                                <BudgetControl budget={budget} remaining={budget-totalExpense} currency={currency} />
+                                <BudgetControl currency={currency} budget={budget} 
+                                    remaining={ Math.round((budget-totalExpense)*100)/100 } />
                             </div>
                             <ExpensesList currency={currency} totalExpense={totalExpense} setTotalExpenses={setTotalExpenses}
                                 expensesList={expensesList} setExpensesList={setExpensesList} addAlert={addAlert} />

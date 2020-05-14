@@ -12,7 +12,7 @@ function ExpensesList({ title= "Your Expenses", columns= "col-md-6", currency="$
         let tempExpensesList = expensesList.filter(expense => expense.id !== id);
         if (tempExpense && tempExpense.amount && expensesList.length === tempExpensesList.length) return addAlert({ type: 'Error', message: "Can't find the selected expense." });
         setExpensesList(tempExpensesList);
-        setTotalExpenses( totalExpense-tempExpense.amount );
+        setTotalExpenses( Math.round((totalExpense-tempExpense.amount)*100)/100 );
         addAlert({ class: 'alert-success', type: 'Success', message: 'The expense have been removed.' });
     };
     

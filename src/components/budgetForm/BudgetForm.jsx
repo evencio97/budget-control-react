@@ -20,7 +20,7 @@ function BudgetForm({ title= "Enter Your Budget", columns= "col-12", currency="$
         if (!tempBudget){
             return addAlert({ type: 'Error', message: 'The budget is invalid.' });
         }
-        setBudget( tempBudget );
+        setBudget( Math.round(tempBudget*100)/100 );
         addAlert({ class: 'alert-success',type: 'Success', message: 'The budget have been added.' });
         initForm();
     };
